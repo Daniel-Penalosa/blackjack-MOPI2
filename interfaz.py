@@ -23,3 +23,14 @@ def pedir_accion():
             return opcion
         print("Opcion no valida. Escribe p o s.")
 
+def otra_partida():
+    return input("\n¿Otra partida? (s/n) ").strip().lower() == "s"
+
+# --- Bloque B3: resultados ---
+def mostrar_resultado(ganador):
+    mensajes = {
+        "jugador": "¡Has ganado!",
+        "banca": "Gana la banca.",
+        "empate": "Empate.",
+    }
+    print("\n=== " + mensajes[ganador] + " ===")
