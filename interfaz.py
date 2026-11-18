@@ -12,3 +12,14 @@ def mostrar_mano(nombre, mano, puntos, ocultar_segunda=False):
     else:
         cartas = " ".join(texto_carta(c) for c in mano)
         print(f"{nombre}: {cartas}  -> {puntos} puntos")
+
+
+# --- Bloque B2: preguntar al jugador ---
+def pedir_accion():
+    """Pregunta hasta recibir 'p' (pedir) o 's' (plantarse)."""
+    while True:
+        opcion = input("¿Pedir carta (p) o plantarse (s)? ").strip().lower()
+        if opcion in ("p", "s"):
+            return opcion
+        print("Opcion no valida. Escribe p o s.")
+
